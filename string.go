@@ -1,6 +1,6 @@
 package goutils
 
-// StrHumpToUnder 驼峰转下划线
+// StrHumpToUnder s 驼峰转下划线
 func StrHumpToUnder(s string) string {
 	sr := []rune(s)
 
@@ -28,7 +28,7 @@ func StrHumpToUnder(s string) string {
 	return string(sr)
 }
 
-// StrUnderToHump 下划线转驼峰
+// StrUnderToHump s 下划线转驼峰
 func StrUnderToHump(s string) string {
 	sr := []rune(s)
 
