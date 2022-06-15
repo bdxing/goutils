@@ -1,5 +1,9 @@
 package goutils
 
+import (
+	"math/rand"
+)
+
 // StrHumpToUnder s 驼峰转下划线
 func StrHumpToUnder(s string) string {
 	sr := []rune(s)
@@ -51,4 +55,14 @@ func StrUnderToHump(s string) string {
 	}
 
 	return string(sr[:len(sr)-len(humpIndex)])
+}
+
+// StrRandom 从种子字符串里随机生成 n 个字符组成字符串。
+// 注意：math/rand 伪随机特性
+func StrRandom(n int, allowedChar []rune) string {
+	b := make([]rune, n)
+	for i := range b {
+		b[i] = allowedChar[rand.Intn(len(allowedChar))]
+	}
+	return string(b)
 }
