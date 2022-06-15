@@ -3,7 +3,7 @@ package goutils
 import "testing"
 
 func TestInSlice(t *testing.T) {
-	t.Log(InSlice(int(11), []int{1, 2, 3}))
+	t.Log(InSlice(int(1), []int{1, 2, 3}))
 }
 
 func TestInSliceInt(t *testing.T) {
@@ -40,4 +40,20 @@ func TestInSliceFloat64(t *testing.T) {
 
 func TestInSliceString(t *testing.T) {
 	t.Log(InSliceString(string("a"), []string{"a", "b", "c"}))
+}
+
+func TestSliceUniqueInt(t *testing.T) {
+	s := []int{1, 2, 3, 1}
+
+	SliceUniqueInt(&s)
+
+	t.Log(s)
+}
+
+func TestSliceUniqueUint(t *testing.T) {
+	s := []uint{1, 2, 3, 1}
+
+	SliceUniqueUint(&s)
+
+	t.Log(s)
 }
