@@ -2,6 +2,10 @@ package goutils
 
 import "testing"
 
+func TestInSlice(t *testing.T) {
+	t.Log(InSlice(int(11), []int{1, 2, 3}))
+}
+
 func TestInSliceInt(t *testing.T) {
 	t.Log(InSliceInt(int(1), []int{1, 2, 3}))
 }
