@@ -5,14 +5,19 @@ import "testing"
 func TestInSlice(t *testing.T) {
 	t.Log(InSlice(int(1), []int{1, 2, 3}))
 	t.Log(InSlice(uint(1), []uint{1, 2, 3}))
+
 	t.Log(InSlice(int8(1), []int8{1, 2, 3}))
 	t.Log(InSlice(uint8(1), []uint8{1, 2, 3}))
+
 	t.Log(InSlice(int32(1), []int32{1, 2, 3}))
 	t.Log(InSlice(uint32(1), []uint32{1, 2, 3}))
+
 	t.Log(InSlice(int64(1), []int64{1, 2, 3}))
 	t.Log(InSlice(uint64(1), []uint64{1, 2, 3}))
+
 	t.Log(InSlice(float32(1), []float32{1, 2, 3}))
 	t.Log(InSlice(float64(1), []float64{1, 2, 3}))
+
 	t.Log(InSlice(string("a"), []string{"a", "b", "c"}))
 }
 
