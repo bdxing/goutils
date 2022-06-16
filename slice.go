@@ -12,6 +12,14 @@ func InSlice(element, array interface{}) bool {
 		if e, s := element.(uint); s {
 			return InSliceUint(e, array.([]uint))
 		}
+	case []int8:
+		if e, s := element.(int8); s {
+			return InSliceInt8(e, array.([]int8))
+		}
+	case []uint8:
+		if e, s := element.(uint8); s {
+			return InSliceUint8(e, array.([]uint8))
+		}
 	case []int32:
 		if e, s := element.(int32); s {
 			return InSliceInt32(e, array.([]int32))
@@ -56,6 +64,26 @@ func InSliceInt(element int, array []int) bool {
 
 // InSliceUint array 里是否存在 element
 func InSliceUint(element uint, array []uint) bool {
+	for k := range array {
+		if array[k] == element {
+			return true
+		}
+	}
+	return false
+}
+
+// InSliceInt8 array 里是否存在 element
+func InSliceInt8(element int8, array []int8) bool {
+	for k := range array {
+		if array[k] == element {
+			return true
+		}
+	}
+	return false
+}
+
+// InSliceUint8 array 里是否存在 element
+func InSliceUint8(element uint8, array []uint8) bool {
 	for k := range array {
 		if array[k] == element {
 			return true
