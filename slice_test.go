@@ -14,6 +14,14 @@ func TestInSliceUint(t *testing.T) {
 	t.Log(InSliceUint(uint(1), []uint{1, 2, 3}))
 }
 
+func TestInSliceInt8(t *testing.T) {
+	t.Log(InSliceInt8(int8(1), []int8{1, 2, 3}))
+}
+
+func TestInSliceUint8(t *testing.T) {
+	t.Log(InSliceUint8(uint8(1), []uint8{1, 2, 3}))
+}
+
 func TestInSliceInt32(t *testing.T) {
 	t.Log(InSliceInt32(int32(1), []int32{1, 2, 3}))
 }
