@@ -199,3 +199,25 @@ func SliceUniqueUint(array *[]uint) {
 	}
 	*array = (*array)[:i]
 }
+
+// SliceSplitStr 把 array 元素集合拆分成由 n 个元素为一组的分组集合
+func SliceSplitStr(array []string, n int) (as [][]string) {
+	if len(array) == 0 {
+		return
+	}
+	if n == 0 {
+		as = append(as, array)
+		return
+	}
+	for {
+		if len(array) < n {
+			if len(array) != 0 {
+				as = append(as, array)
+			}
+			break
+		}
+		as = append(as, array[:n])
+		array = array[n:]
+	}
+	return
+}
