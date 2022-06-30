@@ -61,8 +61,8 @@ func TestInSliceFloat64(t *testing.T) {
 	t.Log(InSliceFloat64(float64(1), []float64{1, 2, 3}))
 }
 
-func TestInSliceString(t *testing.T) {
-	t.Log(InSliceString(string("a"), []string{"a", "b", "c"}))
+func TestInSliceStr(t *testing.T) {
+	t.Log(InSliceStr(string("a"), []string{"a", "b", "c"}))
 }
 
 func TestSliceUniqueInt(t *testing.T) {
@@ -77,6 +77,14 @@ func TestSliceUniqueUint(t *testing.T) {
 	s := []uint{1, 2, 3, 1}
 
 	SliceUniqueUint(&s)
+
+	t.Log(s)
+}
+
+func TestSliceUniqueStr(t *testing.T) {
+	s := []string{"a", "a", "b", "c"}
+
+	SliceUniqueStr(&s)
 
 	t.Log(s)
 }

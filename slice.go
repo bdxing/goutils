@@ -46,7 +46,7 @@ func InSlice(element, array interface{}) bool {
 		}
 	case []string:
 		if e, s := element.(string); s {
-			return InSliceString(e, array.([]string))
+			return InSliceStr(e, array.([]string))
 		}
 	}
 	return false
@@ -152,8 +152,8 @@ func InSliceFloat64(element float64, array []float64) bool {
 	return false
 }
 
-// InSliceString array 里是否存在 element
-func InSliceString(element string, array []string) bool {
+// InSliceStr array 里是否存在 element
+func InSliceStr(element string, array []string) bool {
 	for k := range array {
 		if array[k] == element {
 			return true
@@ -188,6 +188,25 @@ func SliceUniqueUint(array *[]uint) {
 		mg = map[uint]struct{}{}
 		i  int
 		k  uint
+	)
+	for i = range *array {
+		mg[(*array)[i]] = struct{}{}
+	}
+	i = 0
+	for k = range mg {
+		(*array)[i] = k
+		i++
+	}
+	*array = (*array)[:i]
+}
+
+// SliceUniqueStr 去除 array 里的重复元素。
+// 注意：由于使用了 map 结构，所以会改变结果的顺序
+func SliceUniqueStr(array *[]string) {
+	var (
+		mg = map[string]struct{}{}
+		i  int
+		k  string
 	)
 	for i = range *array {
 		mg[(*array)[i]] = struct{}{}
