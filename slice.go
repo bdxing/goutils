@@ -1,7 +1,7 @@
 package goutils
 
-// InSliceInt array 里是否存在 element
-func InSliceInt(element int, array []int) bool {
+// SliceInInt array 里是否存在 element
+func SliceInInt(element int, array []int) bool {
 	for k := range array {
 		if array[k] == element {
 			return true
@@ -10,8 +10,8 @@ func InSliceInt(element int, array []int) bool {
 	return false
 }
 
-// InSliceUint array 里是否存在 element
-func InSliceUint(element uint, array []uint) bool {
+// SliceInUint array 里是否存在 element
+func SliceInUint(element uint, array []uint) bool {
 	for k := range array {
 		if array[k] == element {
 			return true
@@ -20,8 +20,8 @@ func InSliceUint(element uint, array []uint) bool {
 	return false
 }
 
-// InSliceInt8 array 里是否存在 element
-func InSliceInt8(element int8, array []int8) bool {
+// SliceInInt8 array 里是否存在 element
+func SliceInInt8(element int8, array []int8) bool {
 	for k := range array {
 		if array[k] == element {
 			return true
@@ -30,8 +30,8 @@ func InSliceInt8(element int8, array []int8) bool {
 	return false
 }
 
-// InSliceUint8 array 里是否存在 element
-func InSliceUint8(element uint8, array []uint8) bool {
+// SliceInUint8 array 里是否存在 element
+func SliceInUint8(element uint8, array []uint8) bool {
 	for k := range array {
 		if array[k] == element {
 			return true
@@ -40,8 +40,8 @@ func InSliceUint8(element uint8, array []uint8) bool {
 	return false
 }
 
-// InSliceInt32 array 里是否存在 element
-func InSliceInt32(element int32, array []int32) bool {
+// SliceInInt32 array 里是否存在 element
+func SliceInInt32(element int32, array []int32) bool {
 	for k := range array {
 		if array[k] == element {
 			return true
@@ -50,8 +50,8 @@ func InSliceInt32(element int32, array []int32) bool {
 	return false
 }
 
-// InSliceUint32 array 里是否存在 element
-func InSliceUint32(element uint32, array []uint32) bool {
+// SliceInUint32 array 里是否存在 element
+func SliceInUint32(element uint32, array []uint32) bool {
 	for k := range array {
 		if array[k] == element {
 			return true
@@ -60,8 +60,8 @@ func InSliceUint32(element uint32, array []uint32) bool {
 	return false
 }
 
-// InSliceInt64 array 里是否存在 element
-func InSliceInt64(element int64, array []int64) bool {
+// SliceInInt64 array 里是否存在 element
+func SliceInInt64(element int64, array []int64) bool {
 	for k := range array {
 		if array[k] == element {
 			return true
@@ -70,8 +70,8 @@ func InSliceInt64(element int64, array []int64) bool {
 	return false
 }
 
-// InSliceUint64 array 里是否存在 element
-func InSliceUint64(element uint64, array []uint64) bool {
+// SliceInUint64 array 里是否存在 element
+func SliceInUint64(element uint64, array []uint64) bool {
 	for k := range array {
 		if array[k] == element {
 			return true
@@ -80,8 +80,8 @@ func InSliceUint64(element uint64, array []uint64) bool {
 	return false
 }
 
-// InSliceFloat32 array 里是否存在 element
-func InSliceFloat32(element float32, array []float32) bool {
+// SliceInFloat32 array 里是否存在 element
+func SliceInFloat32(element float32, array []float32) bool {
 	for k := range array {
 		if array[k] == element {
 			return true
@@ -90,8 +90,8 @@ func InSliceFloat32(element float32, array []float32) bool {
 	return false
 }
 
-// InSliceFloat64 array 里是否存在 element
-func InSliceFloat64(element float64, array []float64) bool {
+// SliceInFloat64 array 里是否存在 element
+func SliceInFloat64(element float64, array []float64) bool {
 	for k := range array {
 		if array[k] == element {
 			return true
@@ -100,8 +100,8 @@ func InSliceFloat64(element float64, array []float64) bool {
 	return false
 }
 
-// InSliceStr array 里是否存在 element
-func InSliceStr(element string, array []string) bool {
+// SliceInStr array 里是否存在 element
+func SliceInStr(element string, array []string) bool {
 	for k := range array {
 		if array[k] == element {
 			return true

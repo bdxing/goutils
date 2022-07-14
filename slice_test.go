@@ -2,8 +2,8 @@ package goutils
 
 import "testing"
 
-func TestInSliceInt(t *testing.T) {
-	t.Log(InSliceInt(int(1), []int{1, 2, 3}))
+func TestSliceInInt(t *testing.T) {
+	t.Log(SliceInInt(int(1), []int{1, 2, 3}))
 }
 
 func TestSliceUniqueInt(t *testing.T) {
