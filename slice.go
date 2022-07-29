@@ -1,480 +1,480 @@
 package goutils
 
-// SliceInInt array 里是否存在 element
-func SliceInInt(element int, array []int) bool {
-	for k := range array {
-		if array[k] == element {
+// SliceInInt slice 里是否存在 element
+func SliceInInt(element int, slice []int) bool {
+	for k := range slice {
+		if slice[k] == element {
 			return true
 		}
 	}
 	return false
 }
 
-// SliceInUint array 里是否存在 element
-func SliceInUint(element uint, array []uint) bool {
-	for k := range array {
-		if array[k] == element {
+// SliceInUint slice 里是否存在 element
+func SliceInUint(element uint, slice []uint) bool {
+	for k := range slice {
+		if slice[k] == element {
 			return true
 		}
 	}
 	return false
 }
 
-// SliceInInt8 array 里是否存在 element
-func SliceInInt8(element int8, array []int8) bool {
-	for k := range array {
-		if array[k] == element {
+// SliceInInt8 slice 里是否存在 element
+func SliceInInt8(element int8, slice []int8) bool {
+	for k := range slice {
+		if slice[k] == element {
 			return true
 		}
 	}
 	return false
 }
 
-// SliceInUint8 array 里是否存在 element
-func SliceInUint8(element uint8, array []uint8) bool {
-	for k := range array {
-		if array[k] == element {
+// SliceInUint8 slice 里是否存在 element
+func SliceInUint8(element uint8, slice []uint8) bool {
+	for k := range slice {
+		if slice[k] == element {
 			return true
 		}
 	}
 	return false
 }
 
-// SliceInInt32 array 里是否存在 element
-func SliceInInt32(element int32, array []int32) bool {
-	for k := range array {
-		if array[k] == element {
+// SliceInInt32 slice 里是否存在 element
+func SliceInInt32(element int32, slice []int32) bool {
+	for k := range slice {
+		if slice[k] == element {
 			return true
 		}
 	}
 	return false
 }
 
-// SliceInUint32 array 里是否存在 element
-func SliceInUint32(element uint32, array []uint32) bool {
-	for k := range array {
-		if array[k] == element {
+// SliceInUint32 slice 里是否存在 element
+func SliceInUint32(element uint32, slice []uint32) bool {
+	for k := range slice {
+		if slice[k] == element {
 			return true
 		}
 	}
 	return false
 }
 
-// SliceInInt64 array 里是否存在 element
-func SliceInInt64(element int64, array []int64) bool {
-	for k := range array {
-		if array[k] == element {
+// SliceInInt64 slice 里是否存在 element
+func SliceInInt64(element int64, slice []int64) bool {
+	for k := range slice {
+		if slice[k] == element {
 			return true
 		}
 	}
 	return false
 }
 
-// SliceInUint64 array 里是否存在 element
-func SliceInUint64(element uint64, array []uint64) bool {
-	for k := range array {
-		if array[k] == element {
+// SliceInUint64 slice 里是否存在 element
+func SliceInUint64(element uint64, slice []uint64) bool {
+	for k := range slice {
+		if slice[k] == element {
 			return true
 		}
 	}
 	return false
 }
 
-// SliceInFloat32 array 里是否存在 element
-func SliceInFloat32(element float32, array []float32) bool {
-	for k := range array {
-		if array[k] == element {
+// SliceInFloat32 slice 里是否存在 element
+func SliceInFloat32(element float32, slice []float32) bool {
+	for k := range slice {
+		if slice[k] == element {
 			return true
 		}
 	}
 	return false
 }
 
-// SliceInFloat64 array 里是否存在 element
-func SliceInFloat64(element float64, array []float64) bool {
-	for k := range array {
-		if array[k] == element {
+// SliceInFloat64 slice 里是否存在 element
+func SliceInFloat64(element float64, slice []float64) bool {
+	for k := range slice {
+		if slice[k] == element {
 			return true
 		}
 	}
 	return false
 }
 
-// SliceInStr array 里是否存在 element
-func SliceInStr(element string, array []string) bool {
-	for k := range array {
-		if array[k] == element {
+// SliceInStr slice 里是否存在 element
+func SliceInStr(element string, slice []string) bool {
+	for k := range slice {
+		if slice[k] == element {
 			return true
 		}
 	}
 	return false
 }
 
-// SliceUniqueInt 去除 array 里的重复元素。
+// SliceUniqueInt 去除 slice 里的重复元素。
 // 注意：由于使用了 map 结构，所以会改变结果的顺序
-func SliceUniqueInt(array *[]int) {
+func SliceUniqueInt(slice *[]int) {
 	var (
 		mg = map[int]struct{}{}
 		i  int
 		k  int
 	)
-	for i = range *array {
-		mg[(*array)[i]] = struct{}{}
+	for i = range *slice {
+		mg[(*slice)[i]] = struct{}{}
 	}
 	i = 0
 	for k = range mg {
-		(*array)[i] = k
+		(*slice)[i] = k
 		i++
 	}
-	*array = (*array)[:i]
+	*slice = (*slice)[:i]
 }
 
-// SliceUniqueUint 去除 array 里的重复元素。
+// SliceUniqueUint 去除 slice 里的重复元素。
 // 注意：由于使用了 map 结构，所以会改变结果的顺序
-func SliceUniqueUint(array *[]uint) {
+func SliceUniqueUint(slice *[]uint) {
 	var (
 		mg = map[uint]struct{}{}
 		i  int
 		k  uint
 	)
-	for i = range *array {
-		mg[(*array)[i]] = struct{}{}
+	for i = range *slice {
+		mg[(*slice)[i]] = struct{}{}
 	}
 	i = 0
 	for k = range mg {
-		(*array)[i] = k
+		(*slice)[i] = k
 		i++
 	}
-	*array = (*array)[:i]
+	*slice = (*slice)[:i]
 }
 
-// SliceUniqueInt8 去除 array 里的重复元素。
+// SliceUniqueInt8 去除 slice 里的重复元素。
 // 注意：由于使用了 map 结构，所以会改变结果的顺序
-func SliceUniqueInt8(array *[]int8) {
+func SliceUniqueInt8(slice *[]int8) {
 	var (
 		mg = map[int8]struct{}{}
 		i  int
 		k  int8
 	)
-	for i = range *array {
-		mg[(*array)[i]] = struct{}{}
+	for i = range *slice {
+		mg[(*slice)[i]] = struct{}{}
 	}
 	i = 0
 	for k = range mg {
-		(*array)[i] = k
+		(*slice)[i] = k
 		i++
 	}
-	*array = (*array)[:i]
+	*slice = (*slice)[:i]
 }
 
-// SliceUniqueUint8 去除 array 里的重复元素。
+// SliceUniqueUint8 去除 slice 里的重复元素。
 // 注意：由于使用了 map 结构，所以会改变结果的顺序
-func SliceUniqueUint8(array *[]uint8) {
+func SliceUniqueUint8(slice *[]uint8) {
 	var (
 		mg = map[uint8]struct{}{}
 		i  int
 		k  uint8
 	)
-	for i = range *array {
-		mg[(*array)[i]] = struct{}{}
+	for i = range *slice {
+		mg[(*slice)[i]] = struct{}{}
 	}
 	i = 0
 	for k = range mg {
-		(*array)[i] = k
+		(*slice)[i] = k
 		i++
 	}
-	*array = (*array)[:i]
+	*slice = (*slice)[:i]
 }
 
-// SliceUniqueInt32 去除 array 里的重复元素。
+// SliceUniqueInt32 去除 slice 里的重复元素。
 // 注意：由于使用了 map 结构，所以会改变结果的顺序
-func SliceUniqueInt32(array *[]int32) {
+func SliceUniqueInt32(slice *[]int32) {
 	var (
 		mg = map[int32]struct{}{}
 		i  int
 		k  int32
 	)
-	for i = range *array {
-		mg[(*array)[i]] = struct{}{}
+	for i = range *slice {
+		mg[(*slice)[i]] = struct{}{}
 	}
 	i = 0
 	for k = range mg {
-		(*array)[i] = k
+		(*slice)[i] = k
 		i++
 	}
-	*array = (*array)[:i]
+	*slice = (*slice)[:i]
 }
 
-// SliceUniqueUint32 去除 array 里的重复元素。
+// SliceUniqueUint32 去除 slice 里的重复元素。
 // 注意：由于使用了 map 结构，所以会改变结果的顺序
-func SliceUniqueUint32(array *[]uint32) {
+func SliceUniqueUint32(slice *[]uint32) {
 	var (
 		mg = map[uint32]struct{}{}
 		i  int
 		k  uint32
 	)
-	for i = range *array {
-		mg[(*array)[i]] = struct{}{}
+	for i = range *slice {
+		mg[(*slice)[i]] = struct{}{}
 	}
 	i = 0
 	for k = range mg {
-		(*array)[i] = k
+		(*slice)[i] = k
 		i++
 	}
-	*array = (*array)[:i]
+	*slice = (*slice)[:i]
 }
 
-// SliceUniqueInt64 去除 array 里的重复元素。
+// SliceUniqueInt64 去除 slice 里的重复元素。
 // 注意：由于使用了 map 结构，所以会改变结果的顺序
-func SliceUniqueInt64(array *[]int64) {
+func SliceUniqueInt64(slice *[]int64) {
 	var (
 		mg = map[int64]struct{}{}
 		i  int
 		k  int64
 	)
-	for i = range *array {
-		mg[(*array)[i]] = struct{}{}
+	for i = range *slice {
+		mg[(*slice)[i]] = struct{}{}
 	}
 	i = 0
 	for k = range mg {
-		(*array)[i] = k
+		(*slice)[i] = k
 		i++
 	}
-	*array = (*array)[:i]
+	*slice = (*slice)[:i]
 }
 
-// SliceUniqueUint64 去除 array 里的重复元素。
+// SliceUniqueUint64 去除 slice 里的重复元素。
 // 注意：由于使用了 map 结构，所以会改变结果的顺序
-func SliceUniqueUint64(array *[]uint64) {
+func SliceUniqueUint64(slice *[]uint64) {
 	var (
 		mg = map[uint64]struct{}{}
 		i  int
 		k  uint64
 	)
-	for i = range *array {
-		mg[(*array)[i]] = struct{}{}
+	for i = range *slice {
+		mg[(*slice)[i]] = struct{}{}
 	}
 	i = 0
 	for k = range mg {
-		(*array)[i] = k
+		(*slice)[i] = k
 		i++
 	}
-	*array = (*array)[:i]
+	*slice = (*slice)[:i]
 }
 
-// SliceUniqueStr 去除 array 里的重复元素。
+// SliceUniqueStr 去除 slice 里的重复元素。
 // 注意：由于使用了 map 结构，所以会改变结果的顺序
-func SliceUniqueStr(array *[]string) {
+func SliceUniqueStr(slice *[]string) {
 	var (
 		mg = map[string]struct{}{}
 		i  int
 		k  string
 	)
-	for i = range *array {
-		mg[(*array)[i]] = struct{}{}
+	for i = range *slice {
+		mg[(*slice)[i]] = struct{}{}
 	}
 	i = 0
 	for k = range mg {
-		(*array)[i] = k
+		(*slice)[i] = k
 		i++
 	}
-	*array = (*array)[:i]
+	*slice = (*slice)[:i]
 }
 
-// SliceSplitInt 把 array 元素集合拆分成由 n 个元素为一组的分组集合
-func SliceSplitInt(array []int, n int) (as [][]int) {
-	if len(array) == 0 {
+// SliceSplitInt 把 slice 元素集合拆分成由 n 个元素为一组的分组集合
+func SliceSplitInt(slice []int, n int) (as [][]int) {
+	if len(slice) == 0 {
 		return
 	}
 	if n == 0 {
-		as = append(as, array)
+		as = append(as, slice)
 		return
 	}
 	for {
-		if len(array) < n {
-			if len(array) != 0 {
-				as = append(as, array)
+		if len(slice) < n {
+			if len(slice) != 0 {
+				as = append(as, slice)
 			}
 			break
 		}
-		as = append(as, array[:n])
-		array = array[n:]
+		as = append(as, slice[:n])
+		slice = slice[n:]
 	}
 	return
 }
 
-// SliceSplitUint 把 array 元素集合拆分成由 n 个元素为一组的分组集合
-func SliceSplitUint(array []uint, n int) (as [][]uint) {
-	if len(array) == 0 {
+// SliceSplitUint 把 slice 元素集合拆分成由 n 个元素为一组的分组集合
+func SliceSplitUint(slice []uint, n int) (as [][]uint) {
+	if len(slice) == 0 {
 		return
 	}
 	if n == 0 {
-		as = append(as, array)
+		as = append(as, slice)
 		return
 	}
 	for {
-		if len(array) < n {
-			if len(array) != 0 {
-				as = append(as, array)
+		if len(slice) < n {
+			if len(slice) != 0 {
+				as = append(as, slice)
 			}
 			break
 		}
-		as = append(as, array[:n])
-		array = array[n:]
+		as = append(as, slice[:n])
+		slice = slice[n:]
 	}
 	return
 }
 
-// SliceSplitInt8 把 array 元素集合拆分成由 n 个元素为一组的分组集合
-func SliceSplitInt8(array []int8, n int) (as [][]int8) {
-	if len(array) == 0 {
+// SliceSplitInt8 把 slice 元素集合拆分成由 n 个元素为一组的分组集合
+func SliceSplitInt8(slice []int8, n int) (as [][]int8) {
+	if len(slice) == 0 {
 		return
 	}
 	if n == 0 {
-		as = append(as, array)
+		as = append(as, slice)
 		return
 	}
 	for {
-		if len(array) < n {
-			if len(array) != 0 {
-				as = append(as, array)
+		if len(slice) < n {
+			if len(slice) != 0 {
+				as = append(as, slice)
 			}
 			break
 		}
-		as = append(as, array[:n])
-		array = array[n:]
+		as = append(as, slice[:n])
+		slice = slice[n:]
 	}
 	return
 }
 
-// SliceSplitUint8 把 array 元素集合拆分成由 n 个元素为一组的分组集合
-func SliceSplitUint8(array []uint8, n int) (as [][]uint8) {
-	if len(array) == 0 {
+// SliceSplitUint8 把 slice 元素集合拆分成由 n 个元素为一组的分组集合
+func SliceSplitUint8(slice []uint8, n int) (as [][]uint8) {
+	if len(slice) == 0 {
 		return
 	}
 	if n == 0 {
-		as = append(as, array)
+		as = append(as, slice)
 		return
 	}
 	for {
-		if len(array) < n {
-			if len(array) != 0 {
-				as = append(as, array)
+		if len(slice) < n {
+			if len(slice) != 0 {
+				as = append(as, slice)
 			}
 			break
 		}
-		as = append(as, array[:n])
-		array = array[n:]
+		as = append(as, slice[:n])
+		slice = slice[n:]
 	}
 	return
 }
 
-// SliceSplitInt32 把 array 元素集合拆分成由 n 个元素为一组的分组集合
-func SliceSplitInt32(array []int32, n int) (as [][]int32) {
-	if len(array) == 0 {
+// SliceSplitInt32 把 slice 元素集合拆分成由 n 个元素为一组的分组集合
+func SliceSplitInt32(slice []int32, n int) (as [][]int32) {
+	if len(slice) == 0 {
 		return
 	}
 	if n == 0 {
-		as = append(as, array)
+		as = append(as, slice)
 		return
 	}
 	for {
-		if len(array) < n {
-			if len(array) != 0 {
-				as = append(as, array)
+		if len(slice) < n {
+			if len(slice) != 0 {
+				as = append(as, slice)
 			}
 			break
 		}
-		as = append(as, array[:n])
-		array = array[n:]
+		as = append(as, slice[:n])
+		slice = slice[n:]
 	}
 	return
 }
 
-// SliceSplitUint32 把 array 元素集合拆分成由 n 个元素为一组的分组集合
-func SliceSplitUint32(array []uint32, n int) (as [][]uint32) {
-	if len(array) == 0 {
+// SliceSplitUint32 把 slice 元素集合拆分成由 n 个元素为一组的分组集合
+func SliceSplitUint32(slice []uint32, n int) (as [][]uint32) {
+	if len(slice) == 0 {
 		return
 	}
 	if n == 0 {
-		as = append(as, array)
+		as = append(as, slice)
 		return
 	}
 	for {
-		if len(array) < n {
-			if len(array) != 0 {
-				as = append(as, array)
+		if len(slice) < n {
+			if len(slice) != 0 {
+				as = append(as, slice)
 			}
 			break
 		}
-		as = append(as, array[:n])
-		array = array[n:]
+		as = append(as, slice[:n])
+		slice = slice[n:]
 	}
 	return
 }
 
-// SliceSplitInt64 把 array 元素集合拆分成由 n 个元素为一组的分组集合
-func SliceSplitInt64(array []int64, n int) (as [][]int64) {
-	if len(array) == 0 {
+// SliceSplitInt64 把 slice 元素集合拆分成由 n 个元素为一组的分组集合
+func SliceSplitInt64(slice []int64, n int) (as [][]int64) {
+	if len(slice) == 0 {
 		return
 	}
 	if n == 0 {
-		as = append(as, array)
+		as = append(as, slice)
 		return
 	}
 	for {
-		if len(array) < n {
-			if len(array) != 0 {
-				as = append(as, array)
+		if len(slice) < n {
+			if len(slice) != 0 {
+				as = append(as, slice)
 			}
 			break
 		}
-		as = append(as, array[:n])
-		array = array[n:]
+		as = append(as, slice[:n])
+		slice = slice[n:]
 	}
 	return
 }
 
-// SliceSplitUint64 把 array 元素集合拆分成由 n 个元素为一组的分组集合
-func SliceSplitUint64(array []uint64, n int) (as [][]uint64) {
-	if len(array) == 0 {
+// SliceSplitUint64 把 slice 元素集合拆分成由 n 个元素为一组的分组集合
+func SliceSplitUint64(slice []uint64, n int) (as [][]uint64) {
+	if len(slice) == 0 {
 		return
 	}
 	if n == 0 {
-		as = append(as, array)
+		as = append(as, slice)
 		return
 	}
 	for {
-		if len(array) < n {
-			if len(array) != 0 {
-				as = append(as, array)
+		if len(slice) < n {
+			if len(slice) != 0 {
+				as = append(as, slice)
 			}
 			break
 		}
-		as = append(as, array[:n])
-		array = array[n:]
+		as = append(as, slice[:n])
+		slice = slice[n:]
 	}
 	return
 }
 
-// SliceSplitStr 把 array 元素集合拆分成由 n 个元素为一组的分组集合
-func SliceSplitStr(array []string, n int) (as [][]string) {
-	if len(array) == 0 {
+// SliceSplitStr 把 slice 元素集合拆分成由 n 个元素为一组的分组集合
+func SliceSplitStr(slice []string, n int) (as [][]string) {
+	if len(slice) == 0 {
 		return
 	}
 	if n == 0 {
-		as = append(as, array)
+		as = append(as, slice)
 		return
 	}
 	for {
-		if len(array) < n {
-			if len(array) != 0 {
-				as = append(as, array)
+		if len(slice) < n {
+			if len(slice) != 0 {
+				as = append(as, slice)
 			}
 			break
 		}
-		as = append(as, array[:n])
-		array = array[n:]
+		as = append(as, slice[:n])
+		slice = slice[n:]
 	}
 	return
 }
